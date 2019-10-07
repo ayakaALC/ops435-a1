@@ -28,6 +28,10 @@ def usage():
 
 
 def valid_date(date):
+    '''
+    This function validates whether the year, month, or day was entered correctly,
+    or the length of the date is sufficient or not. 
+    '''
     if len(date) != 10:
         print("Error: wrong date entered")
         sys.exit()
@@ -69,7 +73,7 @@ def dbda(date, days):
         #print(yesterday(date,days))
         print(date)
     return date
-    #print(date)
+
 
 def leap_year(lyear):
     
@@ -88,7 +92,10 @@ def leap_year(lyear):
 
 
 def days_in_mon(year):
-
+    '''
+    This function returns the maximum date of the month entered, including the result
+    of the leap year
+    '''
     if leap_year(year):
         feb_max = 29
     else:
@@ -100,6 +107,10 @@ def days_in_mon(year):
 
 
 def tomorrow(date):   
+    '''
+    This function returns the next day of the date entered, using other functions
+    to validate the date and to get the maximum days of the month.
+    '''
     #print('testing after def')
     #if len(date) != 10:
     #    #return '0000/00/00'
@@ -134,6 +145,10 @@ def tomorrow(date):
 
 
 def yesterday(date):
+    '''
+    This function returns the previous day of the date entered, using other functions 
+    previously created to validate the date and to get the maxium date of the month.
+    '''
     #print('Testing')
         #print('testing after def')
 #    if len(date) != 10:
@@ -176,16 +191,6 @@ def yesterday(date):
         year -= 0
         #tmp_day = tmp_day
         month -= 0
-
-    """if tmp_month < 1:
-        to_month = (- tmp_month) % 12
-        to_day = mon_max[to_month] - tmp_days % mon_max[month]
-        year = year - tmp_month / 12
-        year = int(year)
-
-    else:
-        to_month = tmp_month + 0
-        tmp_month = month + 0"""
         
     next_date = str(year)+"/"+str(month).zfill(2)+"/"+str(tmp_day).zfill(2)
 

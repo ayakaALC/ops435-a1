@@ -1,0 +1,23 @@
+OPS435 Assignment 1 
+Written by: Sang Soo Ha
+
+
+Step-By-Step Guide to the Date Algorithm 
+
+
+While using the template provided such as the after function on the website, I have devised an algorithm that could calculate the user's input along with the script on command line. 
+
+Placing an emphasis upon the main function: dbda(), it checks if the user's input is negative or positive by storing it into days = int(sys.argv[3])
+
+With this data, the dbda() function runs either the tomorrow function, or the yesterday function, putting the date into the first parameter along with the number of days into the second parameter. 
+
+Having created both days_in_mon(year) function and leap_year(lear) function, I was able to make the script more efficient by removing the duplicates. The leap_year function within the days_in_mon(year) calculates the parameter as year, and returns the date of February whether it is 29th or 28th.
+This value ultimately replaces feb_max inside mon_max and accurately calculates the date, considering the leap year. 
+
+The Tomorrow function uses the template from the web page as well as the aforementioned functions to efficiently calculate the leap year and if validate or not. It returns the remainder of the maxium date of the month and the next day, adding 1 to the month.
+
+If the month is greater than 12, the month turns to 1, while adding 1 to the year. 
+
+Yesterday function works similar to the tomorrow function. It considers reducing the year  and setting the month to 12 (December) if the month is equal to zero. 
+
+   
